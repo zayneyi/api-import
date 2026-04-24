@@ -16,7 +16,7 @@
       "get": {
         "operationId": "getEndpoint01",
         "summary": "Get endpoint 01",
-        "description": "Original description for endpoint 01. Change only this line to reproduce scheduled import update count.",
+        "description": "Change 1",
         "tags": ["Scheduled Import Test"],
         "responses": {
           "200": {
