@@ -16,7 +16,7 @@
       "get": {
         "operationId": "getEndpoint01",
         "summary": "Get endpoint 01",
-        "description": "Change 1",
+        "description": "Change 2",
         "tags": ["Scheduled Import Test"],
         "responses": {
           "200": {
