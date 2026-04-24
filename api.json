@@ -1,0 +1,764 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Scheduled Import Update Count Test API",
+    "description": "Fixture for testing scheduled OpenAPI imports when only one endpoint description changes.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v1",
+      "description": "Test server"
+    }
+  ],
+  "paths": {
+    "/endpoint-01": {
+      "get": {
+        "operationId": "getEndpoint01",
+        "summary": "Get endpoint 01",
+        "description": "Original description for endpoint 01. Change only this line to reproduce scheduled import update count.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-02": {
+      "get": {
+        "operationId": "getEndpoint02",
+        "summary": "Get endpoint 02",
+        "description": "Stable description for endpoint 02.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-03": {
+      "post": {
+        "operationId": "createEndpoint03",
+        "summary": "Create endpoint 03",
+        "description": "Stable description for endpoint 03.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-04": {
+      "put": {
+        "operationId": "updateEndpoint04",
+        "summary": "Update endpoint 04",
+        "description": "Stable description for endpoint 04.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-05": {
+      "delete": {
+        "operationId": "deleteEndpoint05",
+        "summary": "Delete endpoint 05",
+        "description": "Stable description for endpoint 05.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-06": {
+      "get": {
+        "operationId": "getEndpoint06",
+        "summary": "Get endpoint 06",
+        "description": "Stable description for endpoint 06.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-07": {
+      "post": {
+        "operationId": "createEndpoint07",
+        "summary": "Create endpoint 07",
+        "description": "Stable description for endpoint 07.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-08": {
+      "put": {
+        "operationId": "updateEndpoint08",
+        "summary": "Update endpoint 08",
+        "description": "Stable description for endpoint 08.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-09": {
+      "delete": {
+        "operationId": "deleteEndpoint09",
+        "summary": "Delete endpoint 09",
+        "description": "Stable description for endpoint 09.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-10": {
+      "get": {
+        "operationId": "getEndpoint10",
+        "summary": "Get endpoint 10",
+        "description": "Stable description for endpoint 10.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-11": {
+      "post": {
+        "operationId": "createEndpoint11",
+        "summary": "Create endpoint 11",
+        "description": "Stable description for endpoint 11.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-12": {
+      "put": {
+        "operationId": "updateEndpoint12",
+        "summary": "Update endpoint 12",
+        "description": "Stable description for endpoint 12.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-13": {
+      "delete": {
+        "operationId": "deleteEndpoint13",
+        "summary": "Delete endpoint 13",
+        "description": "Stable description for endpoint 13.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-14": {
+      "get": {
+        "operationId": "getEndpoint14",
+        "summary": "Get endpoint 14",
+        "description": "Stable description for endpoint 14.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-15": {
+      "post": {
+        "operationId": "createEndpoint15",
+        "summary": "Create endpoint 15",
+        "description": "Stable description for endpoint 15.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-16": {
+      "put": {
+        "operationId": "updateEndpoint16",
+        "summary": "Update endpoint 16",
+        "description": "Stable description for endpoint 16.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-17": {
+      "delete": {
+        "operationId": "deleteEndpoint17",
+        "summary": "Delete endpoint 17",
+        "description": "Stable description for endpoint 17.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-18": {
+      "get": {
+        "operationId": "getEndpoint18",
+        "summary": "Get endpoint 18",
+        "description": "Stable description for endpoint 18.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-19": {
+      "post": {
+        "operationId": "createEndpoint19",
+        "summary": "Create endpoint 19",
+        "description": "Stable description for endpoint 19.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-20": {
+      "put": {
+        "operationId": "updateEndpoint20",
+        "summary": "Update endpoint 20",
+        "description": "Stable description for endpoint 20.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-21": {
+      "delete": {
+        "operationId": "deleteEndpoint21",
+        "summary": "Delete endpoint 21",
+        "description": "Stable description for endpoint 21.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-22": {
+      "get": {
+        "operationId": "getEndpoint22",
+        "summary": "Get endpoint 22",
+        "description": "Stable description for endpoint 22.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-23": {
+      "post": {
+        "operationId": "createEndpoint23",
+        "summary": "Create endpoint 23",
+        "description": "Stable description for endpoint 23.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-24": {
+      "put": {
+        "operationId": "updateEndpoint24",
+        "summary": "Update endpoint 24",
+        "description": "Stable description for endpoint 24.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-25": {
+      "delete": {
+        "operationId": "deleteEndpoint25",
+        "summary": "Delete endpoint 25",
+        "description": "Stable description for endpoint 25.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-26": {
+      "get": {
+        "operationId": "getEndpoint26",
+        "summary": "Get endpoint 26",
+        "description": "Stable description for endpoint 26.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-27": {
+      "post": {
+        "operationId": "createEndpoint27",
+        "summary": "Create endpoint 27",
+        "description": "Stable description for endpoint 27.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-28": {
+      "put": {
+        "operationId": "updateEndpoint28",
+        "summary": "Update endpoint 28",
+        "description": "Stable description for endpoint 28.",
+        "tags": ["Scheduled Import Test"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/endpoint-29": {
+      "delete": {
+        "operationId": "deleteEndpoint29",
+        "summary": "Delete endpoint 29",
+        "description": "Stable description for endpoint 29.",
+        "tags": ["Scheduled Import Test"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TestRequest": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "test-name"
+          }
+        }
+      },
+      "SuccessResponse": {
+        "type": "object",
+        "required": ["success"],
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "message": {
+            "type": "string",
+            "example": "ok"
+          }
+        }
+      }
+    }
+  }
+}
