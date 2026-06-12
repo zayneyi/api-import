@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.3",
+  "openapi": "3.0.2",
   "info": {
     "title": "Scheduled Import Update Count Test API",
     "description": "Fixture for testing scheduled OpenAPI imports when only one endpoint description changes.",
